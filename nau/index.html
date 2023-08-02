@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Greeting Card</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('IMG_202308021735350.JPG');
+    background-size: cover;
+    
+  }
+  .card {
+    width: 80%;
+    max-width: 300px;
+    background-image: url(IMG_202308021735350.JPG);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+    position: relative;
+    color: black;
+    margin: 20px;
+  }
+  .card:hover {
+    transform :rotateY(180deg);
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  .content {
+    width: 100%;
+    height:100%;
+    padding: 20px;
+    text-align: center;
+    backface-visibility: hidden;
+    transform: translateZ(50px);
+
+  }
+  .card-image {
+    max-width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    transform-style: preserve-3d;
+   
+  }
+
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <img class="card-image" src="Black Beige Typography Happy Birthday Card.png" alt="Birthday Cake">
+      <h2>Happy Birthday!</h2>
+      <p>Happy Birthday temenku yang selalu menyalurkan positif vibes.</p>
+      <p>Best wishes,<br>nau jelek</p>
+    </div>    
+  </div>
+</body>
+</html>
